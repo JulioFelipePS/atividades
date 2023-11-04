@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 18</title>
+</head>
+<body>
+    <script>
+//         18. Uma loja de eletrodomésticos estabeleceu as seguintes
+// modalidades de pagamento para a venda de suas mercadorias:
+
+// Escreva um algoritmo que armazene o preço de tabela e o número
+// de vezes em que o pagamento será feito. Calcule o valor de cada
+// parcela e o preço total da compra e imprima no console.
+
+        let parcelas
+        let valor =Number(prompt('Valor do produto'))
+        let valorParcela
+        do{
+            parcelas = Number(prompt("Digite o numero de parcelas(1 para a vista e no maximo 15 parcelas)"))
+        }while(parcelas<=1||parcelas> 15)
+        if(parcelas===1){
+            console.log("Valor a vista: R$"+valor.toFixed(2))
+            }else if(parcelas>=2&&parcelas<=5){
+                valorParcela = valor/parcelas
+                console.log('Valor sem acrescimo: R$'+valor.toFixed(2))
+                console.log('Valor da parcela: R$'+valorParcela.toFixed(2))
+                }else if(parcelas>=6&&parcelas<=10){
+                    valor = valor*1.06
+                    valorParcela = valor/parcelas
+                    console.log('Valor com juros : R$'+valor.toFixed(2))
+                    console.log('Valor da parcela: R$'+valorParcela.toFixed(2))
+                    }else if(parcelas>=11&&parcelas<=15){
+                        valor = valor*1.13
+                        valorParcela = valor/parcelas
+                        console.log('Valor com juros : R$'+valor.toFixed(2))
+                        console.log('Valor da parcela: R$'+valorParcela.toFixed(2))
+                        }
+    </script>
+</body>
+</html>
