@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 2</title>
+</head>
+<body>
+    <script>
+        let idade = Number(prompt("Idade do motorista"));
+        let hab;
+        if (idade < 18) {
+            console.log("Não pode dirigir");
+        } else {
+            hab = prompt("Tem carteira? (s/n)").toLowerCase();
+            if (hab === 'n') {
+                console.log("Não pode dirigir");
+            } else if (hab === 's') {
+                console.log("Pode dirigir");
+            } else {
+                console.log("Resposta inválida. Digite 's' para sim ou 'n' para não.");
+            }
+        }
+    </script>
+</body>
+</html>

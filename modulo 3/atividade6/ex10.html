@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 10</title>
+</head>
+<body>
+    <script>
+        let s;
+        let h;
+        let p;
+        do{
+            h = Number(prompt("Digite a altura"))
+            s = Number(prompt('SEXO: 1 PARA FEMININO / 2 PARA MASCULINO '))
+        }while(s!==1&&s!==2)
+        if(s===1){
+            p = (72.7*h)-58;
+        }else{
+            p = (62.1*h)-44.7;
+        }
+        document.write("pseo ideal: "+p.toFixed(2))
+    </script>
+</body>
+</html>
