@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         3. Desenvolva um algoritmo que preenche um vetor com os 4
+// primeiros números perfeitos.
+        let v = [];
+        let i=2;
+        let s=0;
+        do{
+            for(let j=1; j<i; j++){
+                if(i%j===0){
+                    s+=j
+                }
+            }
+            if(s===i){
+                v.push(i)
+                console.log(i)
+            }
+            i++;
+            s=0;
+        }while(v.length<4)
+        console.log(v)
+    </script>
+</body>
+</html>

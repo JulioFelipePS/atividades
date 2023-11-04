@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         5. Escreva um algoritmo que solicite ao usuário a entrada de 5 nomes,
+// e que exiba a lista desses nomes na tela. Após exibir essa lista, o
+// programa deve mostrar também os nomes na ordem inversa em
+// que o usuário os digitou.
+
+// Ex:
+// Entrada: Édson, Marcelo, Letícia, Ju, Thobias
+// Saída: Thobias, Ju, Letícia, Marcelo, Édson
+        let nome
+        let v=[]
+        let vi=[]
+        while(v.length<=4){
+            nome = prompt('digite um nome:')
+            v.push(nome)
+            vi.unshift(nome)
+        }
+        console.log(v)
+        console.log(vi)
+    </script>
+</body>
+</html>

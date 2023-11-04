@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//    4   Desenvolva um algoritmo que declare uma lista de 10 números e
+// solicite um número para o usuário e no final informe se o número
+// que o usuário digitou está dentro da lista ou não.
+        let lista = [11,12,22,23,33,34,44,45,55,56]
+        let n = Number(prompt("Digite um numero"))
+        let igual = false;
+        for (let i of lista) {
+            if(i===n){
+                igual = true;
+            }
+        }
+        if(igual){
+            console.log("está na lista")
+        }else{
+            console.log("não esta na lista")
+        }
+
+    </script>
+</body>
+</html>
