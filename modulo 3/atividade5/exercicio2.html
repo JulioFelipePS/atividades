@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+//         2. Desenvolva um aplicativo que leia o salário e o sexo de vários
+//         funcionários.No final, mostre o total de salários pagos aos homens e
+// o total pago às mulheres.O programa vai perguntar ao usuário se
+// ele quer continuar ou não sempre que ler os dados de um
+//         funcionário.
+let go ="y";
+let sex;
+let salM = 0;
+let salF = 0;
+let sal = 0;
+do{
+    go = prompt("deseja cadastrar dados?( n para não continuar )")
+    if(go!=='n')
+    {
+    sex = prompt("sexo do funcionario(f-feminino mmasculino)")
+    sal =Number(prompt("digite o salario"))
+    if(sex==='m')
+        {
+            
+            salM += sal;
+        }
+    if(sex==='f')
+        {
+            salF += sal;
+        }  
+    } 
+}while(go!=="n")
+
+document.write("Total pago aos homens: "+ salM+"<br>Total pago as mulheres: "+salF )
+
+    </script>
+</body>
+
+</html>

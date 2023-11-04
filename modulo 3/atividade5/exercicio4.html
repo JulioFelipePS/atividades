@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nome =prompt("Nome do cliente")
+        let sex =prompt("sex do cliente(f ou m")
+        let valor = Number(prompt('Valor da compra'))
+        if(sex === 'm'){
+            valor = valor*(0.95)
+        }else{
+            valor = valor*(0.87)
+        }
+        document.write('Valor com desconto da compra:'+valor)
+    </script>
+</body>
+</html>

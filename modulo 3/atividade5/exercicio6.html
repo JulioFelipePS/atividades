@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let l = Number(prompt("largura do terreno"))
+        let c = Number(prompt("comprimento do terreno"))
+        const a = l*c
+        document.write('Area do terreno:'+a.toFixed(0)+" m²<br>")
+        if(a<100){
+            document.write('Abaixo de 100m2 = TERRENO POPULAR')
+        }else if(a>=100&&a<=500){
+            document.write('Entre 100m2 e 500m2 = TERRENO MASTER')
+        }else{
+            document.write('Acima de 500m2 = TERRENO VIP')
+        }
+    </script>
+</body>
+</html>

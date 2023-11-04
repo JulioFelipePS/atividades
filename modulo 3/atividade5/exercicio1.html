@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let idade;
+        let somaIdades = 0;
+        let cont = 0;
+        do{
+            idade = Number(prompt("digite a idade do aluno(999 para parar)"));
+            if (idade!==999) {
+                cont++;
+                somaIdades+=idade;
+            }
+          }while(idade!==999)
+        let mediaIdades = somaIdades/(cont);
+        document.write("total de alunos"+ cont+"<br>Media : "+mediaIdades.toFixed(2)+"<br>")
+
+    </script>
+</body>
+</html>
