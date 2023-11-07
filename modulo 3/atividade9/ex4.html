@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pessoas = []
+        do{
+            const pessoa = {}
+            pessoa.nome = prompt('Digite o nome da pessoa')
+            pessoa.idade = Number(prompt('idade da pessoas'))
+            pessoa.trabalha = confirm('Pessoa está trabalhando?')
+            if (pessoa.trabalha){
+                pessoa.sal = Number(prompt('Digite o salario da pessoa'))
+            }
+            pessoas.push(pessoa)
+        }while(confirm('Deseja cadastrar uma pessoa?'))
+        const desempregados = [];
+        const maior = [];
+        const menor = [];
+        for (let i of pessoas) {
+            if (i.trabalha===false){
+                desempregados.push(i)
+
+            }else if(i.sal>=2500){
+                    maior.push(i)
+                }else{
+                        menor.push(i)
+                    }
+        }
+        console.log('Pessoas desempregadas:');
+        for (let key of desempregados) {
+            console.log(`Nome: ${key.nome}, Idade: ${key.idade}`);
+        }
+       
+        console.log(' Pessoas empregadas com salários maiores que 2500:');
+        for (let key of maior) {
+            console.log(`Nome: ${key.nome}, Idade: ${key.idade}, Salario: ${key.sal}`);
+        }
+
+        console.log(' Pessoas empregadas com salários menores que 2500:');
+        for (let key of menor) {
+            console.log(`Nome: ${key.nome}, Idade: ${key.idade}, Salario: ${key.sal}`);
+        }
+
+
+
+    </script>
+</body>
+</html>

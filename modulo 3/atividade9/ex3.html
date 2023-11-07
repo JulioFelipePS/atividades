@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const aluno1={
+            Nome: 'Kleber',
+            Nota1: 7.5,
+            Nota2: 6.8
+        }
+        const aluno2={
+            Nome: 'Carlos',
+            Nota1: 8.8,
+            Nota2: 3.2,
+        }
+        aluno1.media=(aluno1.Nota1+aluno1.Nota2)/2
+        for (let i in aluno1) {
+            console.log(i + " = " + aluno1[i]);
+        }
+        aluno2.media=(aluno2.Nota1+aluno2.Nota2)/2
+        for (let i in aluno2) {
+            console.log(i + " = " + aluno2[i]);
+        }
+        const mediaTurma = (aluno1.media+aluno2.media)/2
+            console.log('Media da turma: '+mediaTurma.toFixed(2))
+    </script>
+</body>
+</html>

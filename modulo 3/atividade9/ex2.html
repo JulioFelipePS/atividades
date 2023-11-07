@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const notebook = {
+        Processador: "i7",
+        Memória: "16GB",
+        Preço: 5000,
+        HD: "1TB",
+        SSD: "256GB"
+        };
+
+
+        for (const atributo in notebook) {
+        console.log(atributo + " = " + notebook[atributo]);
+        }
+    </script>
+</body>
+</html>
