@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let continuar = true
+        let nome;
+        let idade;
+        let naoTrabalha = [];
+        let traSalMenor = [];
+        let traSalMaior = [];
+        do{
+            continuar = confirm('Deseja realizar um novo cadastro')
+            if(continuar){
+                nome = prompt('Informe o nome')
+                idade = Number(prompt('informe a idade'))
+                let verSal = confirm("Pessoa trabalha?")
+                if(verSal){
+                    let sal = Number(prompt('Informe o valor do salario'))
+                    if(sal < 2500){
+                        let menor=[]
+                        menor.push("Nome:"+nome)
+                        menor.push(" Idade:"+idade)
+                        menor.push(" Salario:"+sal)
+                        traSalMenor.push(menor)
+                        menor = [];
+                    }else{
+                        let maior=[]
+                        maior.push("Nome:"+nome)
+                        maior.push(" Idade:"+idade)
+                        maior.push(" Salario:"+sal)
+                        traSalMaior.push(maior)
+                        maior = [];
+                    }
+                }else{
+                   let des=[];
+                    des.push("Nome:"+nome)
+                    des.push(" Idade:"+idade)
+                    naoTrabalha.push(des)
+                    des = [];
+                }
+            }else {
+                alert("Cadastros fechados")
+            }
+        }while(continuar)
+        if (naoTrabalha.length>0){
+            document.write('Pessoas que não trabalham<br>')
+            for (let i = 0; i < naoTrabalha.length; i++) {
+                document.write(naoTrabalha[i] + "<br>");
+            }
+        }
+        if (traSalMenor.length>0){
+            document.write('<br>Pessoas que trabalham e ganham menos que 2500<br>')
+            for (let i = 0; i < traSalMenor.length; i++) {
+                document.write(traSalMenor[i] + "<br>");
+            }
+        }
+        if (traSalMaior.length>0){
+            document.write('<br>Pessoas que trabalham e ganham mais que 2500<br>')
+            for (let i = 0; i < traSalMaior.length; i++) {
+                document.write(traSalMaior[i] + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>

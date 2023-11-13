@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //const rainbow = ["Vermelho", "Laranja", "Amarelo", "Verde", "Azul","Roxo"];
+        const rainbow = ["Vermelho", "Laranja", "Preto", "Azul"];
+        // a. Remova "Preto"
+        rainbow.splice(2,1)
+        console.log(rainbow)
+        // b. Adicione "Amarelo" e "Verde"
+        rainbow.splice(2,0,"Amarelo","Verde")
+        console.log(rainbow)
+        // c. Adicione "Roxo" 
+        rainbow.push("roxo")
+        console.log(rainbow)       
+    </script>
+</body>
+</html>
