@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade 12 feita toda no console log</h1>
+    <script>
+        const data = [
+            {
+                nome: 'Roger Medeiros',
+                sexo: 'M',
+                salario: 3250,
+            },
+            {
+                nome: 'Carolina Silva',
+                sexo: 'F',
+                salario: 1200,
+            },
+            {
+                nome: 'Cristina Avila',
+                sexo: 'F',
+                salario: 8100,
+            },
+            {
+                nome: 'Gustavo Hoffman',
+                sexo: 'M',
+                salario: 5200.35,
+            },
+            {
+                nome: 'Eva Trindade',
+                sexo: 'F',
+                salario: 2501,
+            },
+            {
+                nome: 'Andre Mathias',
+                sexo: 'M',
+                salario: 1750,
+            },
+            {
+                nome: 'Joice Castro da Silva',
+                sexo: 'F',
+                salario: 3350.25,
+            }
+        ];
+
+//1. Imprima no console a quantidade de pessoas Total.
+        console.log(data.length)
+// 2. Imprima no console a quantidade de pessoas pessoas do sexo
+// Feminino.
+    let contador = 0
+    data.forEach(pessoa => {        
+        if (pessoa.sexo==='F'){
+                contador++
+            }
+    });
+    console.log(contador)
+    
+// 3. Imprima no console a soma do salário de todas as pessoas.
+    let somaSalario = 0
+    data.forEach(pessoa=>{
+        somaSalario+=pessoa.salario
+    })
+    console.log(somaSalario.toFixed(2))
+// 4. Imprima no console a média do salário de todas as pessoas.
+    const media = somaSalario/data.length
+    console.log(media.toFixed(2))
+// 5. Imprima no console a soma do salário de todos as pessoas do sexo
+// Masculino
+    let somaSalM=0
+    const homens = data.filter(pessoa=>pessoa.sexo==='M')
+    homens.forEach(pessoa => {
+        somaSalM += pessoa.salario
+    });
+    console.log(somaSalM.toFixed(2))
+// 6. Imprima no console a média do salário de todas as pessoas do sexo
+// Masculino
+    const mediaSalM = somaSalM/homens.length
+    console.log(mediaSalM.toFixed(2))
+// 7. Utilize a função Some, para descobrir se existe algum salário
+// superior a R$ 7.000, imprima verdadeiro no console caso exista, caso
+// contrário falso.
+   const salMaior7k = data.some(pessoa => pessoa.salario > 7000)
+   console.log(salMaior7k ? 'Verdadeiro':'Falso')
+// 8. Utilize a função findIndex, para descobrir a posição da pessoa de
+// nome 'Eva Trindade'.
+    const eva = data.findIndex(pessoa=> pessoa.nome ==='Eva Trindade')
+    console.log(eva)
+// 9. Utilize a função filter, para filtrar todas pessoas que o nome possua o
+// sobrenome "Silva".
+    const silva = data.filter(pessoa=>pessoa.nome.includes('Silva'))
+    console.log(silva)
+// 10. Imprima os nomes utilizando o MAP
+    data.map(pessoa=>console.log(pessoa.nome))
+    </script>
+</body>
+</html>
